@@ -9,6 +9,7 @@ namespace Plugin.Avalonia.MVVMExpress.Navigation;
 
 public static class MvvmExpressNavigationExtensions
 {
+    /// <summary>Registers the Frame navigator and <see cref="INavigator"/>.</summary>
     public static MvvmExpressOptions UseFrameNavigation(
         this MvvmExpressOptions options,
         Action<AvaloniaFrameNavigator, IServiceProvider>? configure = null)

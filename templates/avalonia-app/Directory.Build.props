@@ -1,5 +1,9 @@
 <Project>
   <PropertyGroup>
-    <AvaloniaMvvmExpressVersion>0.1.0-preview</AvaloniaMvvmExpressVersion>
+    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AvaloniaMvvmExpressVersion>1.0.0</AvaloniaMvvmExpressVersion>
   </PropertyGroup>
 </Project>

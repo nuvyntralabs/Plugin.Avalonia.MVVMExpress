@@ -1,0 +1,8 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="App1.Pages.DetailsPage">
+  <StackPanel Margin="24" Spacing="8">
+    <TextBlock FontSize="20" FontWeight="SemiBold" Text="{Binding Title}" />
+    <Button Content="Back" Command="{Binding BackCommand}" />
+  </StackPanel>
+</UserControl>

@@ -4,7 +4,7 @@ Modular MVVM for **Avalonia** on .NET 10: ViewModels, async commands, Frame navi
 
 **Product:** MVVMExpress (Avalonia family)
 **Package prefix:** `Plugin.Avalonia.MVVMExpress`
-**Status:** `0.1.0-preview`
+**Status:** `1.0.0`
 **This is not** Plugin.Maui.MVVMExpress, Plugin.Wpf.MVVMExpress, or the other desktop families. Independent port — no PackageReference to those packages.
 
 [![NuGet](https://img.shields.io/nuget/v/Plugin.Avalonia.MVVMExpress.Core.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.Avalonia.MVVMExpress.Core)
@@ -28,7 +28,17 @@ builder.Services.UseAvaloniaMvvmExpress(o => o
     .UseAuth<LoginViewModel>());
 ```
 
-There is no Shell host. Use a `Frame` named `NavigationHost`.
+There is no Shell host. Use `Plugin.Avalonia.MVVMExpress.Controls.Frame` named `NavigationHost`.
+
+## Templates and IDE extensions
+
+| Host | How |
+| --- | --- |
+| CLI | `Plugin.Avalonia.MVVMExpress.Templates` |
+| Visual Studio Code | Search Avalonia MVVMExpress |
+| Visual Studio 2022+ | Search Avalonia MVVMExpress |
+
+Extensions install the NuGet template pack and run `dotnet new`. Marketplace publish is manual from the `ide-extensions` workflow artifact.
 
 ## Templates
 

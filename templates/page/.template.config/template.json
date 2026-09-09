@@ -1,9 +1,59 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Niladri Prasad Padhy",
-  "classifications": ["Avalonia", "MVVM"],
+  "classifications": [
+    "Avalonia",
+    "MVVM",
+    "Code"
+  ],
   "identity": "Plugin.Avalonia.MVVMExpress.Page",
-  "name": "Avalonia MVVMExpress Page",
+  "groupIdentity": "Plugin.Avalonia.MVVMExpress.Page",
+  "name": "MVVMExpress Avalonia Page",
   "shortName": "avalonia-mvvmexpress-page",
-  "sourceName": "Feature"
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "Feature",
+  "preferNameDirectory": true,
+  "description": "Avalonia UserControl, ViewModel, registered service, and commands for Plugin.Avalonia.MVVMExpress.",
+  "defaultName": "Feature",
+  "symbols": {
+    "RootNamespace": {
+      "type": "parameter",
+      "description": "Root namespace for the generated types",
+      "replaces": "App1",
+      "datatype": "text",
+      "defaultValue": "App1"
+    },
+    "LowerName": {
+      "type": "generated",
+      "generator": "casing",
+      "parameters": {
+        "source": "name",
+        "toLower": true
+      },
+      "replaces": "feature"
+    }
+  },
+  "primaryOutputs": [
+    {
+      "path": "FeaturePage.axaml"
+    },
+    {
+      "path": "FeaturePage.axaml.cs"
+    },
+    {
+      "path": "FeatureViewModel.cs"
+    },
+    {
+      "path": "IFeatureService.cs"
+    },
+    {
+      "path": "FeatureService.cs"
+    },
+    {
+      "path": "FeatureServiceCollectionExtensions.cs"
+    }
+  ]
 }

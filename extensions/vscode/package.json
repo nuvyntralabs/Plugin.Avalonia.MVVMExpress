@@ -1,0 +1,52 @@
+{
+  "name": "avalonia-mvvmexpress",
+  "displayName": "Avalonia MVVMExpress",
+  "description": "Create Avalonia MVVMExpress apps and pages via dotnet new. Templates stay in Plugin.Avalonia.MVVMExpress.Templates.",
+  "version": "1.0.0",
+  "publisher": "nuvyntralabs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nuvyntralabs/Plugin.Avalonia.MVVMExpress.git"
+  },
+  "homepage": "https://github.com/nuvyntralabs/Plugin.Avalonia.MVVMExpress/tree/main/extensions",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "avalonia",
+    "mvvm",
+    "mvvmexpress",
+    "dotnet",
+    "templates"
+  ],
+  "activationEvents": [
+    "onCommand:avaloniamvvmexpress.createApp",
+    "onCommand:avaloniamvvmexpress.addPage"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "avaloniamvvmexpress.createApp",
+        "title": "Avalonia MVVMExpress: Create New App"
+      },
+      {
+        "command": "avaloniamvvmexpress.addPage",
+        "title": "Avalonia MVVMExpress: Add Page"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.0"
+  }
+}

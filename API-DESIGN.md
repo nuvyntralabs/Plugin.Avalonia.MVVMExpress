@@ -1,6 +1,6 @@
 # Plugin.Avalonia.MVVMExpress Public API Design
 
-**0.1.0-preview** contract. Namespaces start with `Plugin.Avalonia.MVVMExpress`. Core shapes match Maui 1.3 / WPF 1.0 so a ViewModel ports with a namespace swap. This is **not** a type-forward of sibling families.
+**1.0.0** contract. Namespaces start with `Plugin.Avalonia.MVVMExpress`. Core shapes match Maui 1.3 / WPF 1.0 so a ViewModel ports with a namespace swap. This is **not** a type-forward of sibling families.
 
 ## Hosting
 

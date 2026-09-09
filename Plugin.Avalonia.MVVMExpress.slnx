@@ -14,6 +14,8 @@
     <Project Path="tests/Plugin.Avalonia.MVVMExpress.Validation.Tests/Plugin.Avalonia.MVVMExpress.Validation.Tests.csproj" />
     <Project Path="tests/Plugin.Avalonia.MVVMExpress.Pagination.Tests/Plugin.Avalonia.MVVMExpress.Pagination.Tests.csproj" />
     <Project Path="tests/Plugin.Avalonia.MVVMExpress.Templates.Tests/Plugin.Avalonia.MVVMExpress.Templates.Tests.csproj" />
+    <Project Path="tests/Plugin.Avalonia.MVVMExpress.Navigation.Tests/Plugin.Avalonia.MVVMExpress.Navigation.Tests.csproj" />
+    <Project Path="tests/Plugin.Avalonia.MVVMExpress.Dialogs.Tests/Plugin.Avalonia.MVVMExpress.Dialogs.Tests.csproj" />
   </Folder>
   <Folder Name="/samples/">
     <Project Path="samples/Playground/Plugin.Avalonia.MVVMExpress.Playground.csproj" />

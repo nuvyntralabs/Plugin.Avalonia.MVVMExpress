@@ -13,6 +13,7 @@ namespace Plugin.Avalonia.MVVMExpress.Hosting;
 /// <summary>Avalonia host entry point.</summary>
 public static class AvaloniaMvvmExpressServiceCollectionExtensions
 {
+    /// <summary>Registers Core plus the family dispatcher, window context, and lifecycle.</summary>
     public static IServiceCollection AddAvaloniaMvvmExpress(
         this IServiceCollection services,
         Action<MvvmExpressOptions>? configure = null)
@@ -23,6 +24,7 @@ public static class AvaloniaMvvmExpressServiceCollectionExtensions
         return UseAvaloniaMvvmExpress(services, options);
     }
 
+    /// <summary>Registers MVVMExpress on <paramref name="builder"/>.</summary>
     public static IHostApplicationBuilder UseAvaloniaMvvmExpress(
         this IHostApplicationBuilder builder,
         Action<MvvmExpressOptions>? configure = null)
@@ -32,6 +34,7 @@ public static class AvaloniaMvvmExpressServiceCollectionExtensions
         return builder;
     }
 
+    /// <summary>Registers MVVMExpress on <paramref name="services"/>.</summary>
     public static IServiceCollection UseAvaloniaMvvmExpress(
         this IServiceCollection services,
         Action<MvvmExpressOptions>? configure)

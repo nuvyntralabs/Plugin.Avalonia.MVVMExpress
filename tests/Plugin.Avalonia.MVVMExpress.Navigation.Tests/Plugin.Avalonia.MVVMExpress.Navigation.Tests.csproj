@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Navigation.Tests</RootNamespace>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress\Plugin.Avalonia.MVVMExpress.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Navigation\Plugin.Avalonia.MVVMExpress.Navigation.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Testing\Plugin.Avalonia.MVVMExpress.Testing.csproj" />
+  </ItemGroup>
+
+</Project>

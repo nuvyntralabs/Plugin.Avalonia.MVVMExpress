@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidAvaloniaMvvmExpressPackage">
+    <Menus>
+      <Menu guid="guidAvaloniaMvvmExpressCmdSet" id="AvaloniaMvvmExpressMenu" priority="0x0710" type="Menu">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+        <Strings>
+          <ButtonText>Avalonia MVVMExpress</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidAvaloniaMvvmExpressCmdSet" id="AvaloniaMvvmExpressMenuGroup" priority="0x0600">
+        <Parent guid="guidAvaloniaMvvmExpressCmdSet" id="AvaloniaMvvmExpressMenu" />
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidAvaloniaMvvmExpressCmdSet" id="CreateAppCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidAvaloniaMvvmExpressCmdSet" id="AvaloniaMvvmExpressMenuGroup" />
+        <Strings>
+          <ButtonText>Create New App...</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidAvaloniaMvvmExpressCmdSet" id="AddPageCommandId" priority="0x0200" type="Button">
+        <Parent guid="guidAvaloniaMvvmExpressCmdSet" id="AvaloniaMvvmExpressMenuGroup" />
+        <Strings>
+          <ButtonText>Add Page...</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidAvaloniaMvvmExpressPackage" value="{e3f4a5b6-8b4d-4e91-9c2a-6f0d8e1b7a44}" />
+    <GuidSymbol name="guidAvaloniaMvvmExpressCmdSet" value="{f4a5b6c7-9c5e-4f02-8d3b-7e1c9a0f6b55}">
+      <IDSymbol name="AvaloniaMvvmExpressMenu" value="0x1000" />
+      <IDSymbol name="AvaloniaMvvmExpressMenuGroup" value="0x1020" />
+      <IDSymbol name="CreateAppCommandId" value="0x0100" />
+      <IDSymbol name="AddPageCommandId" value="0x0101" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

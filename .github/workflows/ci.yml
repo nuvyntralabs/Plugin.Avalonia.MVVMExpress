@@ -51,8 +51,8 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "${NUGET_KEY}" ]; then
-            echo "::error::NUGET_KEY_AVALONIA secret is empty. Add a nuget.org API key scoped to Plugin.Avalonia.*."
-            exit 1
+            echo "::warning::NUGET_KEY_AVALONIA is not set yet. Tests and pack still run; nuget.org publish is skipped until the secret exists."
+            exit 0
           fi
           python3 .ci-tools/.github/scripts/check-nuget-release.py --plugin-root .
 
@@ -71,6 +71,8 @@ jobs:
       - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Validation.Tests/Plugin.Avalonia.MVVMExpress.Validation.Tests.csproj -c Release --nologo
       - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Pagination.Tests/Plugin.Avalonia.MVVMExpress.Pagination.Tests.csproj -c Release --nologo
       - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Templates.Tests/Plugin.Avalonia.MVVMExpress.Templates.Tests.csproj -c Release --nologo
+      - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Navigation.Tests/Plugin.Avalonia.MVVMExpress.Navigation.Tests.csproj -c Release --nologo
+      - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Dialogs.Tests/Plugin.Avalonia.MVVMExpress.Dialogs.Tests.csproj -c Release --nologo
 
   linux:
     name: Pack linux
@@ -130,7 +132,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "${NUGET_KEY}" ]; then
-            echo "::error::NUGET_KEY_AVALONIA secret is empty."
-            exit 1
+            echo "::warning::NUGET_KEY_AVALONIA is not set yet. Tests and pack still run; nuget.org publish is skipped until the secret exists."
+            exit 0
           fi
           python3 .ci-tools/.github/scripts/push-nuget-packages.py --packages-dir packages

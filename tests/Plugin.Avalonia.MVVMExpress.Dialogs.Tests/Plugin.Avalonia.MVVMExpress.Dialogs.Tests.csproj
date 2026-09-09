@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Dialogs.Tests</RootNamespace>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Dialogs\Plugin.Avalonia.MVVMExpress.Dialogs.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress\Plugin.Avalonia.MVVMExpress.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Testing\Plugin.Avalonia.MVVMExpress.Testing.csproj" />
+  </ItemGroup>
+
+</Project>
