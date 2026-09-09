@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Plugin.Avalonia.MVVMExpress.Playground.Pages.LoginPage">
+  <StackPanel Margin="24" MaxWidth="360">
+    <TextBlock FontSize="20" FontWeight="SemiBold" Text="Sign in" />
+    <TextBlock Margin="0,8,0,16" Text="demo@mvvmexpress.dev / secret" />
+    <TextBox Text="{{Binding Email}}" />
+    <TextBox Margin="0,8,0,16" Watermark="Password" Text="{{Binding Password}}" />
+    <Button Content="Sign in" Command="{{Binding SignInCommand}}" />
+  </StackPanel>
+</UserControl>

@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Niladri Prasad Padhy",
+  "classifications": ["Avalonia", "MVVM", "MauiEssentials"],
+  "identity": "Plugin.Avalonia.MVVMExpress.App",
+  "name": "Avalonia MVVMExpress App",
+  "shortName": "avalonia-mvvmexpress",
+  "sourceName": "App1",
+  "preferNameDirectory": true
+}

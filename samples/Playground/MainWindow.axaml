@@ -1,0 +1,11 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:nav="clr-namespace:Plugin.Avalonia.MVVMExpress.Controls;assembly=Plugin.Avalonia.MVVMExpress"
+        x:Class="Plugin.Avalonia.MVVMExpress.Playground.MainWindow"
+        Title="MVVMExpress Playground"
+        Width="720" Height="520">
+  <DockPanel>
+    <TextBlock DockPanel.Dock="Top" Margin="16,12,16,0" FontSize="18" FontWeight="SemiBold" Text="Plugin.Avalonia.MVVMExpress" />
+    <nav:Frame Name="NavigationHost" />
+  </DockPanel>
+</Window>

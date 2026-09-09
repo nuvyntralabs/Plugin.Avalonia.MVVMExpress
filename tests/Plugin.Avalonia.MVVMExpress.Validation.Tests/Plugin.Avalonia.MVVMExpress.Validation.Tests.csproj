@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Validation.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Validation\Plugin.Avalonia.MVVMExpress.Validation.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Testing\Plugin.Avalonia.MVVMExpress.Testing.csproj" />
+    <Content Include="..\..\src\Plugin.Avalonia.MVVMExpress.Validation\ILLink.Descriptors.xml" Link="ILLink.Descriptors.xml" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

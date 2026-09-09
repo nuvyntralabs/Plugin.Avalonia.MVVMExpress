@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Pagination.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Pagination\Plugin.Avalonia.MVVMExpress.Pagination.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Testing\Plugin.Avalonia.MVVMExpress.Testing.csproj" />
+  </ItemGroup>
+
+</Project>

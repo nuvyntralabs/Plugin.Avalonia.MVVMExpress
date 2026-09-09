@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+  <assembly fullname="Plugin.Avalonia.MVVMExpress.Core">
+    <type fullname="Plugin.Avalonia.MVVMExpress.Forms.FormViewModel" preserve="all" />
+    <type fullname="Plugin.Avalonia.MVVMExpress.Forms.FormField`1" preserve="all" />
+    <type fullname="Plugin.Avalonia.MVVMExpress.Hosting.IModule" preserve="all" />
+    <type fullname="Plugin.Avalonia.MVVMExpress.Navigation.INavigator" preserve="all" />
+    <type fullname="Plugin.Avalonia.MVVMExpress.Navigation.IPageNavigator" preserve="all" />
+    <type fullname="Plugin.Avalonia.MVVMExpress.Generated.GeneratedRegistrationHooks" preserve="all" />
+  </assembly>
+</linker>

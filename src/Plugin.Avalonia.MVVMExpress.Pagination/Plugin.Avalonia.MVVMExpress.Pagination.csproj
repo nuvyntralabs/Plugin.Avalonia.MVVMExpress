@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsAotCompatible>true</IsAotCompatible>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Pagination</RootNamespace>
+    <AssemblyName>Plugin.Avalonia.MVVMExpress.Pagination</AssemblyName>
+    <PackageId>Plugin.Avalonia.MVVMExpress.Pagination</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <Title>WPF MVVMExpress — pagination and search</Title>
+    <Description>PagedCollection, SnapshotCollection, and SearchQuery for Plugin.Avalonia.MVVMExpress lists.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.Avalonia.MVVMExpress.Core\Plugin.Avalonia.MVVMExpress.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TrimmerRootDescriptor Include="ILLink.Descriptors.xml" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\..\nuget.png" Pack="true" PackagePath="icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Plugin.Avalonia.MVVMExpress.Pagination.Tests" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Plugin.Avalonia.MVVMExpress.Core/Plugin.Avalonia.MVVMExpress.Core.csproj" />
+    <Project Path="src/Plugin.Avalonia.MVVMExpress/Plugin.Avalonia.MVVMExpress.csproj" />
+    <Project Path="src/Plugin.Avalonia.MVVMExpress.Navigation/Plugin.Avalonia.MVVMExpress.Navigation.csproj" />
+    <Project Path="src/Plugin.Avalonia.MVVMExpress.Dialogs/Plugin.Avalonia.MVVMExpress.Dialogs.csproj" />
+    <Project Path="src/Plugin.Avalonia.MVVMExpress.Validation/Plugin.Avalonia.MVVMExpress.Validation.csproj" />
+    <Project Path="src/Plugin.Avalonia.MVVMExpress.Pagination/Plugin.Avalonia.MVVMExpress.Pagination.csproj" />
+    <Project Path="src/Plugin.Avalonia.MVVMExpress.Testing/Plugin.Avalonia.MVVMExpress.Testing.csproj" />
+    <Project Path="src/Plugin.Avalonia.MVVMExpress.Templates/Plugin.Avalonia.MVVMExpress.Templates.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Plugin.Avalonia.MVVMExpress.Core.Tests/Plugin.Avalonia.MVVMExpress.Core.Tests.csproj" />
+    <Project Path="tests/Plugin.Avalonia.MVVMExpress.Validation.Tests/Plugin.Avalonia.MVVMExpress.Validation.Tests.csproj" />
+    <Project Path="tests/Plugin.Avalonia.MVVMExpress.Pagination.Tests/Plugin.Avalonia.MVVMExpress.Pagination.Tests.csproj" />
+    <Project Path="tests/Plugin.Avalonia.MVVMExpress.Templates.Tests/Plugin.Avalonia.MVVMExpress.Templates.Tests.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/Playground/Plugin.Avalonia.MVVMExpress.Playground.csproj" />
+  </Folder>
+</Solution>

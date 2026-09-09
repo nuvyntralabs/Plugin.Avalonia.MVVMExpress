@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsAotCompatible>true</IsAotCompatible>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Testing</RootNamespace>
+    <AssemblyName>Plugin.Avalonia.MVVMExpress.Testing</AssemblyName>
+    <PackageId>Plugin.Avalonia.MVVMExpress.Testing</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <Title>WPF MVVMExpress — test fakes</Title>
+    <Description>LeakProbe, ScaleProfile, FakeDialogs, FakeNavigator, FakeMainThread, FakeConnectivity, FakeMessageHub, and ScopedNavigator for unit-testing Plugin.Avalonia.MVVMExpress ViewModels.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.Avalonia.MVVMExpress.Core\Plugin.Avalonia.MVVMExpress.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\..\nuget.png" Pack="true" PackagePath="icon.png" />
+  </ItemGroup>
+
+</Project>

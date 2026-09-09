@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Navigation</RootNamespace>
+    <AssemblyName>Plugin.Avalonia.MVVMExpress.Navigation</AssemblyName>
+    <PackageId>Plugin.Avalonia.MVVMExpress.Navigation</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <Title>Avalonia MVVMExpress — Frame navigation</Title>
+    <Description>AvaloniaFrameNavigator</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.Avalonia.MVVMExpress\Plugin.Avalonia.MVVMExpress.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\..\nuget.png" Pack="true" PackagePath="icon.png" />
+  </ItemGroup>
+</Project>

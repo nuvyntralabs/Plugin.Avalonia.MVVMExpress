@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Playground</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Avalonia.Desktop" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="Avalonia.Fonts.Inter" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress\Plugin.Avalonia.MVVMExpress.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Navigation\Plugin.Avalonia.MVVMExpress.Navigation.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Dialogs\Plugin.Avalonia.MVVMExpress.Dialogs.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Validation\Plugin.Avalonia.MVVMExpress.Validation.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Pagination\Plugin.Avalonia.MVVMExpress.Pagination.csproj" />
+  </ItemGroup>
+</Project>

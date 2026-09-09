@@ -1,0 +1,136 @@
+# Avalonia family. nuget.org uses NUGET_KEY_AVALONIA (Plugin.Avalonia.*). GitHub Packages uses GITHUB_TOKEN.
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*.*.*"]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  version-align:
+    name: Version alignment
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require matching packable package versions
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/check-versions.py --plugin-root . --scope library
+
+  version-check:
+    name: NuGet release
+    needs: [version-align]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: nuvyntralabs/MauiEssentials
+          ref: main
+          path: .ci-tools
+      - name: Check NUGET_KEY_AVALONIA and published version
+        env:
+          NUGET_KEY: ${{ secrets.NUGET_KEY_AVALONIA }}
+        run: |
+          set -euo pipefail
+          if [ -z "${NUGET_KEY}" ]; then
+            echo "::error::NUGET_KEY_AVALONIA secret is empty. Add a nuget.org API key scoped to Plugin.Avalonia.*."
+            exit 1
+          fi
+          python3 .ci-tools/.github/scripts/check-nuget-release.py --plugin-root .
+
+  test:
+    name: Unit tests
+    needs: [version-check]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Core.Tests/Plugin.Avalonia.MVVMExpress.Core.Tests.csproj -c Release --nologo
+      - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Validation.Tests/Plugin.Avalonia.MVVMExpress.Validation.Tests.csproj -c Release --nologo
+      - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Pagination.Tests/Plugin.Avalonia.MVVMExpress.Pagination.Tests.csproj -c Release --nologo
+      - run: dotnet test tests/Plugin.Avalonia.MVVMExpress.Templates.Tests/Plugin.Avalonia.MVVMExpress.Templates.Tests.csproj -c Release --nologo
+
+  linux:
+    name: Pack linux
+    needs: [test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - run: |
+          dotnet pack src/Plugin.Avalonia.MVVMExpress.Core/Plugin.Avalonia.MVVMExpress.Core.csproj -c Release -o artifacts
+          dotnet pack src/Plugin.Avalonia.MVVMExpress.Validation/Plugin.Avalonia.MVVMExpress.Validation.csproj -c Release -o artifacts
+          dotnet pack src/Plugin.Avalonia.MVVMExpress.Pagination/Plugin.Avalonia.MVVMExpress.Pagination.csproj -c Release -o artifacts
+          dotnet pack src/Plugin.Avalonia.MVVMExpress.Testing/Plugin.Avalonia.MVVMExpress.Testing.csproj -c Release -o artifacts
+          dotnet pack src/Plugin.Avalonia.MVVMExpress.Templates/Plugin.Avalonia.MVVMExpress.Templates.csproj -c Release -o artifacts
+          dotnet pack src/Plugin.Avalonia.MVVMExpress/Plugin.Avalonia.MVVMExpress.csproj -c Release -o artifacts
+          dotnet pack src/Plugin.Avalonia.MVVMExpress.Navigation/Plugin.Avalonia.MVVMExpress.Navigation.csproj -c Release -o artifacts
+          dotnet pack src/Plugin.Avalonia.MVVMExpress.Dialogs/Plugin.Avalonia.MVVMExpress.Dialogs.csproj -c Release -o artifacts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nuget-linux
+          path: |
+            artifacts/*.nupkg
+            artifacts/*.snupkg
+
+  publish:
+    name: nuget.org and GitHub Packages
+    needs: [linux]
+    if: success()
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: nuvyntralabs/MauiEssentials
+          ref: main
+          path: .ci-tools
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+      - uses: actions/download-artifact@v4
+        with:
+          name: nuget-linux
+          path: packages
+      - name: Push nupkg
+        env:
+          NUGET_KEY: ${{ secrets.NUGET_KEY_AVALONIA }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+          if [ -z "${NUGET_KEY}" ]; then
+            echo "::error::NUGET_KEY_AVALONIA secret is empty."
+            exit 1
+          fi
+          python3 .ci-tools/.github/scripts/push-nuget-packages.py --packages-dir packages

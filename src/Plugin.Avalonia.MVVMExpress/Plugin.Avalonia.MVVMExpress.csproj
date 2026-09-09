@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress</RootNamespace>
+    <AssemblyName>Plugin.Avalonia.MVVMExpress</AssemblyName>
+    <PackageId>Plugin.Avalonia.MVVMExpress</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <Title>Avalonia MVVMExpress host — DI, dispatcher, lifecycle</Title>
+    <Description>Avalonia host for MVVMExpress: UseAvaloniaMvvmExpress, AvaloniaDispatcherMainThread, window context, and visual-tree ViewModel lifecycle. Depends on Plugin.Avalonia.MVVMExpress.Core.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.Avalonia.MVVMExpress.Core\Plugin.Avalonia.MVVMExpress.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\..\nuget.png" Pack="true" PackagePath="icon.png" />
+  </ItemGroup>
+</Project>

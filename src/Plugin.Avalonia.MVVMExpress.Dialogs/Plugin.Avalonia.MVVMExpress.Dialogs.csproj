@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Dialogs</RootNamespace>
+    <AssemblyName>Plugin.Avalonia.MVVMExpress.Dialogs</AssemblyName>
+    <PackageId>Plugin.Avalonia.MVVMExpress.Dialogs</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <Title>Avalonia MVVMExpress — dialogs and toasts</Title>
+    <Description>AvaloniaDialogs</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.Avalonia.MVVMExpress\Plugin.Avalonia.MVVMExpress.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+    <None Include="..\..\nuget.png" Pack="true" PackagePath="icon.png" />
+  </ItemGroup>
+</Project>

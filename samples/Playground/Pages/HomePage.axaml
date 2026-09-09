@@ -1,0 +1,15 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Plugin.Avalonia.MVVMExpress.Playground.Pages.HomePage">
+  <DockPanel Margin="24">
+    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="8">
+      <Button Content="Increment" Command="{{Binding IncrementCommand}}" />
+      <Button Content="Details" Command="{{Binding OpenDetailsCommand}}" />
+      <Button Content="Edit form" Command="{{Binding OpenEditCommand}}" />
+      <Button Content="Toast" Command="{{Binding ToastCommand}}" />
+      <Button Content="Second window" Command="{{Binding OpenWindowCommand}}" />
+    </StackPanel>
+    <TextBlock DockPanel.Dock="Top" Margin="0,12" FontSize="16" Text="{{Binding Count, StringFormat=Count: {0}}}" />
+    <ListBox ItemsSource="{{Binding Catalog}}" />
+  </DockPanel>
+</UserControl>

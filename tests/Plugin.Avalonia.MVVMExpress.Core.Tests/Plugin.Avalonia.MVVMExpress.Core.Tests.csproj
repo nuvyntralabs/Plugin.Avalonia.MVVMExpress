@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Plugin.Avalonia.MVVMExpress.Core.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Core\Plugin.Avalonia.MVVMExpress.Core.csproj" />
+    <ProjectReference Include="..\..\src\Plugin.Avalonia.MVVMExpress.Testing\Plugin.Avalonia.MVVMExpress.Testing.csproj" />
+  </ItemGroup>
+
+</Project>

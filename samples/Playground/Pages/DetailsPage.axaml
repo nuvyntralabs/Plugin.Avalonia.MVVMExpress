@@ -1,0 +1,8 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Plugin.Avalonia.MVVMExpress.Playground.Pages.DetailsPage">
+  <StackPanel Margin="24">
+    <TextBlock FontSize="20" Text="{{Binding Title}}" />
+    <Button Margin="0,16,0,0" Content="Back" Command="{{Binding BackCommand}}" />
+  </StackPanel>
+</UserControl>

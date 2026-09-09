@@ -1,0 +1,11 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Plugin.Avalonia.MVVMExpress.Playground.Pages.EditPage">
+  <StackPanel Margin="24" MaxWidth="360">
+    <TextBox Text="{{Binding Name}}" />
+    <StackPanel Margin="0,16,0,0" Orientation="Horizontal" Spacing="8">
+      <Button Content="Save" Command="{{Binding SaveCommand}}" />
+      <Button Content="Back" Command="{{Binding BackCommand}}" />
+    </StackPanel>
+  </StackPanel>
+</UserControl>
