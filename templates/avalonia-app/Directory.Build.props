@@ -4,6 +4,6 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
-    <AvaloniaMvvmExpressVersion>1.0.0</AvaloniaMvvmExpressVersion>
+    <AvaloniaMvvmExpressVersion>1.0.1</AvaloniaMvvmExpressVersion>
   </PropertyGroup>
 </Project>

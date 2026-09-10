@@ -4,7 +4,7 @@ Modular MVVM for **Avalonia** on .NET 10: ViewModels, async commands, Frame navi
 
 **Product:** MVVMExpress (Avalonia family)
 **Package prefix:** `Plugin.Avalonia.MVVMExpress`
-**Status:** `1.0.0`
+**Status:** `1.0.1`
 **This is not** Plugin.Maui.MVVMExpress, Plugin.Wpf.MVVMExpress, or the other desktop families. Independent port — no PackageReference to those packages.
 
 [![NuGet](https://img.shields.io/nuget/v/Plugin.Avalonia.MVVMExpress.Core.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.Avalonia.MVVMExpress.Core)

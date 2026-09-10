@@ -7,7 +7,7 @@ Modular MVVM application framework for Avalonia.
 - Product: MVVMExpress (Avalonia family)
 - Package prefix: `Plugin.Avalonia.MVVMExpress`
 - Catalog: https://github.com/nuvyntralabs/MauiEssentials
-- Status: **1.0.0**
+- Status: **1.0.1**
 - TFMs: Core/Validation/Pagination/Testing `net10.0`; Host/Navigation/Dialogs `net10.0`
 
 ## When to consider this repository
