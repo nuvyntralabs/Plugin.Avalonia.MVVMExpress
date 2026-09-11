@@ -4,7 +4,7 @@
     <Identity Id="nuvyntralabs.AvaloniaMVVMExpress.VisualStudio" Version="1.0.1" Language="en-US" Publisher="Nuvyntra Labs" />
     <DisplayName>Avalonia MVVMExpress for Visual Studio</DisplayName>
     <Description xml:space="preserve">Install Plugin.Avalonia.MVVMExpress.Templates and create Avalonia MVVMExpress apps and pages via dotnet new.</Description>
-    <MoreInfo>https://github.com/nuvyntralabs/Plugin.Avalonia.MVVMExpress</MoreInfo>
+    <MoreInfo>https://nuvyntralabs.github.io/packages/plugin-avalonia-mvvmexpress/</MoreInfo>
     <License>LICENSE</License>
     <Tags>Avalonia;MVVM;templates;dotnet new;mvvmexpress</Tags>
   </Metadata>

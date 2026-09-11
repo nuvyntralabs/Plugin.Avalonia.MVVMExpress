@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/nuvyntralabs/Plugin.Avalonia.MVVMExpress.git"
   },
-  "homepage": "https://github.com/nuvyntralabs/Plugin.Avalonia.MVVMExpress/tree/main/extensions",
+  "homepage": "https://nuvyntralabs.github.io/packages/plugin-avalonia-mvvmexpress/",
   "engines": {
     "vscode": "^1.90.0"
   },
